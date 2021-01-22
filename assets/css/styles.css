@@ -1,0 +1,31 @@
+nav{
+    margin: 4 em;
+}
+.pink{
+    background-color: #E83E8C;
+}
+
+.row{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+h1 p{
+    color:#707070
+}
+section{
+    margin: 3em;
+}
+.col{
+    margin-bottom: 5em;
+}
+#icons{
+    background-color: #17A2B8;
+    color: #FFFFFF;
+}
+h3 {
+    display: inline-block;
+}
+footer{
+    background-color: #E83E8C;
+    background-size: cover;
+    text-align: center;
+}
