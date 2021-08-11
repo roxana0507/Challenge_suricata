@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/stylesform.css">
 </head>
 <body>
-  <div class="conteiner">
+  <div>
     <h1>Formulario</h1>
     <!--<form novalidate> se usa para no pedir la validacion de los datos, o se puede colocar un boton imput.-->
     <!-- podemos usar el metodo GET o POST para enviar la informacion de manera visible u oculta en la URL.-->
@@ -18,85 +18,107 @@
     <form>
       <fieldset>
         <legend>Realizar pedido</legend>
+        <div class="contenedor">
+          <label for="idPerson">Id persona</label>
+          <input type="text" id="idPerson" name="idPerson" readonly="true" value="1-1300-9067" disabled="true"/><br> <!--Estos son datos de solo lectura pero que igual se envian al lado del servidor al usar el readonly, pero si le agregamos el disable sera solo lectura pero tampoco se enviará al servidor.-->
+          <input type="hidden" id="sistem" name="sistem" value="SAP">
+        </div>
 
-        <label for="idPerson">Id persona</label><br>
-        <input type="text" id="idPerson" name="idPerson" readonly="true" value="100" disabled="true" /><br> <!--Estos son datos de solo lectura pero que igual se envian al lado del servidor al usar el readonly, pero si le agregamos el disable sera solo lectura pero tampoco se enviará al servidor.-->
+        <div class="contenedor">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required="true"/><!--al poner el name="nombre" se hace el envio de la informacion al servidor se puede ver reflejado en la direccion URL en el navegador-->
+        </div>
 
-        <input type="hidden" id="sistem" name="sistem" value="SAP">
+        <div class="contenedor">
+          <label for="last-name">Apellidos</label>
+          <input type="text" id="last-name" name="apellido" placeholder="Escribe tus apellidos" required="true"/>
+        </div>
 
-        <label for="name">Nombre</label><br>
-        <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required="true"/><br> <!--al poner el name="nombre" se hace el envio de la informacion al servidor se puede ver reflejado en la direccion URL en el navegador-->
+        <div class="contenedor">
+          <label for="age">Edad</label>
+          <input type="number" id="number" name="number" value="18" required="true"/><!-- podemos usar el atributo de value para indicar cual es el dato exacto de esa casilla pero que se puede modificar-->
+        </div>
 
-        <label for="last-name">Apellidos</label><br>
-        <input type="text" id="last-name" name="apellido" placeholder="Escribe tus apellidos" required="true"/><br>
+        <div class="contenedor">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required="true"/>
+        </div>
 
-        <label for="age">Edad</label><br>
-        <input type="number" id="number" name="number" value="18" required="true"/><br>  <!-- podemos usar el atributo de value para indicar cual es el dato exacto de esa casilla pero que se puede modificar-->
+        <div class="contenedor">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required="true"/>
+        </div>
 
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required="true"/><br>
+          <!-- Radiobuttons-->
+        <div class="radiobuttons">
+          <label>Género: </label><!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
+          <input type="radio" id="female" name="gender" value="female"/> 
+          <label for="female">Femenino</label>
+          <input type="radio" id="male" name="gender" value="male"/>
+          <label for="male">Masculino</label><br>
+        </div>
 
-        <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" required="true"/><br>
+          <!-- Checkboxes-->
+        <div class="checkboxes">
+          <label>Productos Favoritos</label><br><!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
+          <input type="checkbox" id="breakfast" name="product" value="breakfast"/> 
+          <label for="breakfast">Desayuno</label>
 
-        <!-- Radiobuttons-->
-        <label>Género</label><br>  <!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
-        <input type="radio" id="female" name="gender" value="female"/> 
-        <label for="female">Femenino</label><br>
-        <input type="radio" id="male" name="gender" value="male"/>
-        <label for="male">Masculino</label><br>
+          <input type="checkbox" id="snacks" name="product" value="snacks"/>
+          <label for="snacks"> Colaciones </label>
 
-        <!-- Checkboxes-->
-        <label>Productos Favoritos</label><br>  <!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
-        <input type="checkbox" id="breakfast" name="product" value="breakfast"/> 
-        <label for="breakfast">Desayuno</label><br>
+          <input type="checkbox" id="fruits" name="product" value="fruits"/>
+          <label for="fruits"> Frutas </label><br>
 
-        <input type="checkbox" id="snacks" name="product" value="snacks"/>
-        <label for="snacks"> Colaciones </label><br>
+          <input type="checkbox" id="vegetables" name="product" value="vegetables"/>
+          <label for="vegetables"> Vegetales </label>
 
-        <input type="checkbox" id="fruits" name="product" value="fruits"/>
-        <label for="fruits"> Frutas </label><br>
+          <input type="checkbox" id="beverages" name="product" value="beverages"/>
+          <label for="beverages"> Bebidas </label>
 
-        <input type="checkbox" id="vegetables" name="product" value="vegetables"/>
-        <label for="vegetables"> Vegetales </label><br>
+          <input type="checkbox" id="sweets" name="product" value="sweets"/>
+          <label for="sweets"> Dulces </label>
+        </div>
 
-        <input type="checkbox" id="beverages" name="product" value="beverages"/>
-        <label for="beverages"> Bebidas </label><br>
-
-        <input type="checkbox" id="sweets" name="product" value="sweets"/>
-        <label for="sweets"> Dulces </label><br>
         <!-- Select-->
-        <label for="productg"> Elija un producto como regalía</label><br>
-        <select name="productg" id="productg">
-          <option value="apple">Manzana</option>
-          <option value="pineapple">Piña</option>
-          <option value="sandwich">Emparedado</option>
-          <option value="mashed-potato">Puré de papa</option>
-          <option value="cold-coffee">Café frío</option>
-          <option value="cappucino">Capucino</option>
-        </select><br>
+        <div class="contenedor">
+          <label for="productg"> Elija un producto como regalía</label><br>
+          <select name="productg" id="productg">
+            <option value="apple">Manzana</option>
+            <option value="pineapple">Piña</option>
+            <option value="sandwich">Emparedado</option>
+            <option value="mashed-potato">Puré de papa</option>
+            <option value="cold-coffee">Café frío</option>
+            <option value="cappucino">Capucino</option>
+          </select><br>
+        </div>
 
-        <!-- Select multiple-->
-        <label for="additional"> Productos adicionales</label><br>
-        <select name="additional" id="additional" multiple="true"><!--Para establecer la opcion de eleccion multiple en un select se agrega a la etiqueta select el atributo de multiple="true"-->
-          <option value="1">Mayonesa</option>
-          <option value="2">Salsa de tomate</option>
-          <option value="3">Salsa picante</option>
-          <option value="4">Pajilla</option>
-          <option value="5" selected="true">Servilletas</option><!-- Este producto se mostrará primero-->
-          <option value="6">Cubiertos</option>
-        </select><br>
+          <!-- Select multiple-->
+        <div class="contenedor">
+          <label for="additional"> Productos adicionales</label><br>
+          <select name="additional" id="additional" multiple="true"><!--Para establecer la opcion de eleccion multiple en un select se agrega a la etiqueta select el atributo de multiple="true"-->
+            <option value="1">Mayonesa</option>
+            <option value="2">Salsa de tomate</option>
+            <option value="3">Salsa picante</option>
+            <option value="4">Pajilla</option>
+            <option value="5" selected="true">Servilletas</option><!-- Este producto se mostrará primero-->
+            <option value="6">Cubiertos</option>
+          </select><br>
+        </div>
 
-        <!--textarea-->
-        <label for="comment">Comentario</label><br>
-        <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Escriba su comentario"></textarea><br>
+          <!--textarea-->
+        <div class="contenedor">
+          <label for="comment">Comentario</label><br>
+          <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Escriba su comentario"></textarea><br>
+        </div>
 
-        <input type="submit" value="Enviar">
-        <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
-        <!-- 1. Para colocar un producto en el select que sea el que se muestre primero agregamos selected="true".
-        2. Para establecer la opcion de eleccion multiple en un select se agrega a la etiqueta select el atributo de multiple="true"-->
-
-        <input type="reset" value="Restablecer"> <!--elimina todos los datos introducidos en el form-->
+        <div class="contenedor"></div>
+          <input type="submit" value="Enviar">
+          <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validar">
+          <!-- 1. Para colocar un producto en el select que sea el que se muestre primero agregamos selected="true".
+          2. Para establecer la opcion de eleccion multiple en un select se agrega a la etiqueta select el atributo de multiple="true"-->
+          <input type="reset" value="Restablecer"> <!--elimina todos los datos introducidos en el form-->
+        </div>
       </fieldset>
     </form>
   </div>
