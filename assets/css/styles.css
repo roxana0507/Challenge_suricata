@@ -29,3 +29,13 @@ footer{
     background-size: cover;
     text-align: center;
 }
+
+body{
+    background-color:#646464;
+}
+form{
+    background-color: #e44f9c;
+    padding: 5%;
+}
+input{
+}
