@@ -22,7 +22,7 @@ body{
     text-align: center;
 }
 .contenedor label{
-    color: white;
+    color:#003265;
 }
 .contenedor input{
     width: 100%;
@@ -51,6 +51,9 @@ div .radiobuttons, .checkboxes{
     background: rgba(253, 178, 243, 0.377);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+div label{
+    color: #003265;
+}
 legend{
     color:#003265;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -64,4 +67,36 @@ fieldset{
     border-color: #003265;
 
 }
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox] + label{
+    cursor: pointer;
+}
+.checkboxes label::before{
+    content: "";
+    background: transparent;
+    border: 4px solid rgb(151, 13, 243);
+    border-radius: 10px;
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    margin-right: 5px;
+    margin-top: 5px;
+    text-align: center;
+    text-shadow: 4px -2px 3px rgb(107, 107, 102) ;
+    vertical-align: middle;
+    padding: 2px;
+}
+input[type=checkbox]:checked + label::before{
+    content: 'x';
+    font-size: 20px;
+    color: rgb(240, 245, 248);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2px;
+    text-align:center;
+    line-height: 17px;
+    
+}
+
 
