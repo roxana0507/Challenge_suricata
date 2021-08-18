@@ -98,5 +98,8 @@ input[type=checkbox]:checked + label::before{
     line-height: 17px;
     
 }
+table{
+    text-align: center;
+}
 
 

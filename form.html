@@ -60,25 +60,39 @@
 
           <!-- Checkboxes-->
         <div class="checkboxes">
-          <h2>Productos Favoritos</h2><br><!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
-          <input type="checkbox" id="breakfast" name="product" value="breakfast"/> 
-          <label for="breakfast">Desayuno</label>
+          <table>
+            <caption><h2>Productos Favoritos</h2><br></caption><!-- para poder elegir entre varias cosas por ejemplo masculino o femenino en el name debe colocarse el mismo nombre en este caso colocamos la palabra genero o gender -->
+            <tr>
+              <td>
+                <input type="checkbox" id="breakfast" name="product" value="breakfast"/> 
+                <label for="breakfast">Desayuno</label>
+              </td>
+              <td>
+                <input type="checkbox" id="snacks" name="product" value="snacks"/>
+                <label for="snacks"> Colaciones </label>
+              </td>
+              <td>
+                <input type="checkbox" id="fruits" name="product" value="fruits"/>
+                <label for="fruits"> Frutas </label><br>
+              </td>
+            </tr>
 
-          <input type="checkbox" id="snacks" name="product" value="snacks"/>
-          <label for="snacks"> Colaciones </label>
-
-          <input type="checkbox" id="fruits" name="product" value="fruits"/>
-          <label for="fruits"> Frutas </label><br>
-
-          <input type="checkbox" id="vegetables" name="product" value="vegetables"/>
-          <label for="vegetables"> Vegetales </label>
-
-          <input type="checkbox" id="beverages" name="product" value="beverages"/>
-          <label for="beverages"> Bebidas </label>
-
-          <input type="checkbox" id="sweets" name="product" value="sweets"/>
-          <label for="sweets"> Dulces </label>
-        </div>
+            <tr>
+              <td>
+                <input type="checkbox" id="vegetables" name="product" value="vegetables"/>
+                <label for="vegetables"> Vegetales </label>
+              </td>
+              <td>
+                <input type="checkbox" id="beverages" name="product" value="beverages"/>
+                <label for="beverages"> Bebidas </label>
+              </td>
+              <td>
+                <input type="checkbox" id="sweets" name="product" value="sweets"/>
+                <label for="sweets"> Dulces </label>
+              </td>
+          </tr>
+        </table>
+      </div>
 
         <!-- Select-->
         <div class="contenedor">
